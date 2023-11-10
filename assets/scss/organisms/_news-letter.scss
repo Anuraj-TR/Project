@@ -1,0 +1,30 @@
+.news-letter-wrap {
+  padding: $spacer-3 $spacer-0;
+  .content-wrapper {
+    display: flex;
+    align-items: normal;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+}
+
+@include tablet {
+  .news-letter-wrap {
+    .content-wrapper {
+      flex-direction: row;
+      align-items: center;
+      .news-letter {
+        padding: $spacer-2 $spacer-3;
+      }
+      .title {
+        max-width: 40%;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .news-letter-wrap {
+    margin-bottom: $spacer-6;
+  }
+}

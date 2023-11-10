@@ -1,0 +1,57 @@
+.title {
+  font-size: 26px;
+  font-weight: 600;
+  color: $color-blue;
+  text-decoration: none;
+  margin-bottom: $spacer-3;
+
+  &--black {
+    color: $color-black;
+  }
+
+  &--sub {
+    font-size: 22px;
+    color: $color-black;
+  }
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 400;
+  color: $color-blue;
+  text-decoration: none;
+  margin-bottom: $spacer-2;
+}
+
+@include tablet {
+  .title {
+    font-size: 32px;
+    &--sub {
+      font-size: 28px;
+    }
+  }
+}
+
+@include tablet-pro {
+  .title {
+    font-size: 42px;
+    margin-bottom: $spacer-4;
+    &--sub {
+      font-size: 36px;
+    }
+  }
+}
+
+@include desktop {
+  .title {
+    font-size: 52px;
+    margin-bottom: $spacer-5;
+    &--sub {
+      font-size: 46px;
+    }
+  }
+  .text {
+    font-size: 18px;
+    margin-bottom: $spacer-3;
+  }
+}

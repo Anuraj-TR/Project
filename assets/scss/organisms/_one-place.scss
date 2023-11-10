@@ -1,0 +1,129 @@
+.oneplace {
+  width: 100%;
+  &-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+
+  &__right {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $spacer-4 $spacer-2;
+    background-color: #eeefff;
+    border-bottom-left-radius: 40px;
+    margin-bottom: 24px;
+
+    &-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__left {
+    width: 100%;
+  }
+
+  &__tile-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__tile {
+    width: 100%;
+    padding: $spacer-4 $spacer-2;
+    &-logo {
+      width: 50px;
+      height: 50px;
+      // background-color: $color-purple;
+      border-radius: 50%;
+      margin-bottom: 16px;
+
+      svg {
+        path {
+          stroke: $color-white;
+        }
+      }
+    }
+
+    &-title {
+      font-size: 22px;
+      font-weight: 500;
+      color: $color-blue;
+      margin-bottom: $spacer-2;
+    }
+
+    &-title {
+      font-size: 16px;
+      font-weight: 400;
+      color: $color-blue;
+    }
+  }
+}
+
+@include tablet {
+  .oneplace {
+    &__tile {
+      width: calc(50% - $spacer-3);
+      margin: $spacer-2;
+      &-title {
+        font-size: 22px;
+      }
+      &-text {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@include tablet-pro {
+  .oneplace {
+    position: relative;
+    &-wrap {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+    &__left {
+      width: 55%;
+      padding-right: $spacer-3;
+    }
+    &__right {
+      width: 45%;
+      justify-content: flex-start;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-bottom-left-radius: 100px;
+
+      &-image {
+        width: auto;
+        margin-left: -50px;
+      }
+    }
+
+    &__tile {
+      &-title {
+        font-size: 24px;
+      }
+      &-text {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .oneplace {
+    margin-bottom: $spacer-6;
+  }
+}

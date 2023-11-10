@@ -1,0 +1,38 @@
+.reviews {
+  width: 100%;
+  &-wrap {
+    width: 100%;
+    padding: $spacer-4 $spacer-0;
+    .review-card {
+      margin: $spacer-2 $spacer-3;
+    }
+  }
+  .title,
+  .text {
+    text-align: center;
+    margin-bottom: $spacer-3;
+  }
+  .slick-arrow {
+    &.slick-prev,
+    &.slick-next {
+      display: none !important;
+    }
+  }
+  .slick-dots {
+    li {
+      background-color: $color-white;
+      border: 1px solid $color-purple;
+      border-radius: 50%;
+
+      &.slick-active {
+        background-color: $color-purple;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .reviews {
+    margin-bottom: $spacer-6;
+  }
+}

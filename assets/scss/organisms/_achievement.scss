@@ -1,0 +1,76 @@
+.achievements {
+  width: 100%;
+  margin-bottom: $spacer-4;
+  &-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__tile {
+    width: calc(50% - $spacer-3);
+    border: 1px solid $color-blue;
+    border-radius: 10px;
+    padding: $spacer-2 $spacer-3;
+    margin: $spacer-2;
+
+    &-value {
+      font-size: 24px;
+      font-weight: 500;
+      color: $color-blue;
+      margin-bottom: $spacer-2;
+    }
+
+    &-text {
+      font-size: 16px;
+      font-weight: 400;
+      color: $color-grey;
+    }
+  }
+}
+
+@include tablet {
+  .achievements {
+    margin: $spacer-5 $spacer-0;
+    &__tile {
+      width: 25%;
+      margin: $spacer-0;
+      border-radius: 0;
+      border-top: 0;
+      border-left: 0;
+
+      &:last-child {
+        border-right: 0;
+      }
+    }
+  }
+}
+
+@include tablet-pro {
+  .achievements {
+    margin: $spacer-6 $spacer-0;
+    &__tile {
+      &-value {
+        font-size: 28px;
+      }
+      &-text {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .achievements {
+    margin-bottom: 60px;
+    &__tile {
+      &-value {
+        font-size: 32px;
+      }
+      &-text {
+        font-size: 18px;
+      }
+    }
+  }
+}

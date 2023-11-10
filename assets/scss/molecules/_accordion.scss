@@ -1,0 +1,50 @@
+.ts-accordion {
+  width: 100%;
+  .accordion-item {
+    border: none;
+    outline: none;
+  }
+  .accordion-button:not(.collapsed) {
+    color: $color-purple;
+    background-color: $color-white;
+    box-shadow: none;
+  }
+  .accordion-button {
+    padding: $spacer-2 $spacer-3;
+    &:focus {
+      outline: none;
+      border: none;
+      box-shadow: none;
+    }
+  }
+  .accordion-body {
+    padding: $spacer-0 $spacer-3;
+  }
+  &__list {
+    list-style: none;
+    li {
+      a {
+        width: 100%;
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 400;
+        color: $color-blue;
+        padding: $spacer-2 $spacer-0;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .ts-accordion {
+    .accordion-collapse {
+      display: block !important;
+    }
+    .accordion-button {
+      pointer-events: none;
+      &::after {
+        content: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.news-letter {
+  padding: $spacer-2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  border: 1px solid $color-blue;
+  border-radius: 20px;
+  &__input-wrap {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: $spacer-2;
+    border-bottom: 1px solid $color-grey;
+    margin-bottom: $spacer-2;
+  }
+  &__input {
+    padding: $spacer-2 $spacer-2;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: $color-blue;
+    flex: 1;
+    &::placeholder {
+      font-size: 16px;
+      font-weight: 500;
+      color: $color-grey;
+      opacity: 0.8;
+    }
+
+    &-logo {
+      width: 20px;
+      height: 20px;
+      margin-right: $spacer-2;
+      svg {
+        path {
+          fill: $color-grey;
+        }
+      }
+    }
+  }
+  .btn {
+    margin-left: auto;
+  }
+}
+
+@include tablet {
+  .news-letter {
+    flex-direction: row;
+    padding: $spacer-3;
+    &__input-wrap {
+      border: none;
+      margin-right: $spacer-3;
+    }
+  }
+}
